@@ -1,0 +1,5155 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2022-04-13T15:48:15.453Z",
+        "line": 13,
+        "name": "Validation of different sections in the Portal for admin profile",
+        "description": "",
+        "id": "log-reports-validation;validation-of-different-sections-in-the-portal-for-admin-profile;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 15278000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6222000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 209000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify if \"24Hr Log Report\" report links are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "24Hr Log Report",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.BaseDriver.verifyReportLogsion(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6995000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on the \"24Hr Log Report\" link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "24Hr Log Report",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.clickReportLogs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5572000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "verify if \"24Hr Log Report\" Report log page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "24Hr Log Report",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.verifyScaffoldReportLog(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.WebDriverException: element click intercepted: Element \u003ca class\u003d\"nav-link f-12 fw-500 c-blue logoutBtn\" href\u003d\"/Logout\"\u003e...\u003c/a\u003e is not clickable at point (1281, 53). Other element would receive the click: \u003cdiv class\u003d\"loader\"\u003e\u003c/div\u003e\n  (Session info: chrome\u003d100.0.4896.88)\nBuild info: version: \u00273.5.3\u0027, revision: \u0027a88d25fe6b\u0027, time: \u00272017-08-29T12:42:44.417Z\u0027\nSystem info: host: \u0027DESKTOP-SJ9UUPR\u0027, ip: \u0027192.168.0.153\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_281\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities [{networkConnectionEnabled\u003dfalse, chrome\u003d{chromedriverVersion\u003d100.0.4896.60 (6a5d10861ce8de5fce22564658033b43cb7de047-refs/branch-heads/4896@{#875}), userDataDir\u003dC:\\Users\\LENOVO\\AppData\\Local\\Temp\\scoped_dir4560_1290213954}, timeouts\u003d{implicit\u003d0, pageLoad\u003d300000, script\u003d30000}, pageLoadStrategy\u003dnormal, unhandledPromptBehavior\u003ddismiss and notify, strictFileInteractability\u003dfalse, platform\u003dXP, proxy\u003dProxy(), goog:chromeOptions\u003d{debuggerAddress\u003dlocalhost:61565}, webauthn:extension:credBlob\u003dtrue, acceptInsecureCerts\u003dfalse, browserVersion\u003d100.0.4896.88, browserName\u003dchrome, javascriptEnabled\u003dtrue, platformName\u003dXP, setWindowRect\u003dtrue, webauthn:extension:largeBlob\u003dtrue, webauthn:virtualAuthenticators\u003dtrue}]\nSession ID: 45598415873cabd43194398906074a49\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:646)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:275)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)\r\n\tat stepDefinitions.BaseDriver.logout_of_the_application(BaseDriver.java:72)\r\n\tat ✽.Logout of the application(file:///E:/ScaffoldReport/Scaffold/AdminWebApp/AdminWebApp/AdminWebApp/src/test/resources/Feature/WebAdmin/Generic/LogReportsValidation-Generic.feature:9)\r\n",
+              "duration": 6773000000,
+              "status": "failed"
+            },
+            "line": 9,
+            "name": "Logout of the application",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.logout_of_the_application()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T15:48:56.675Z",
+        "line": 14,
+        "name": "Validation of different sections in the Portal for admin profile",
+        "description": "",
+        "id": "log-reports-validation;validation-of-different-sections-in-the-portal-for-admin-profile;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11279000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6074000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 325000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify if \"Consolidated Reports\" report links are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Consolidated Reports",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.BaseDriver.verifyReportLogsion(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1550000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on the \"Consolidated Reports\" link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Consolidated Reports",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.clickReportLogs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5142000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "verify if \"Consolidated Reports\" Report log page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Consolidated Reports",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.verifyScaffoldReportLog(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6171000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Logout of the application",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.logout_of_the_application()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T15:49:27.240Z",
+        "line": 15,
+        "name": "Validation of different sections in the Portal for admin profile",
+        "description": "",
+        "id": "log-reports-validation;validation-of-different-sections-in-the-portal-for-admin-profile;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11162000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6190000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 175000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify if \"Water Steam Cycle Local Log\" report links are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Water Steam Cycle Local Log",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.BaseDriver.verifyReportLogsion(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6374000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on the \"Water Steam Cycle Local Log\" link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Water Steam Cycle Local Log",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.clickReportLogs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5144000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "verify if \"Water Steam Cycle Local Log\" Report log page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Water Steam Cycle Local Log",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.verifyScaffoldReportLog(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6178000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Logout of the application",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.logout_of_the_application()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T15:50:02.467Z",
+        "line": 16,
+        "name": "Validation of different sections in the Portal for admin profile",
+        "description": "",
+        "id": "log-reports-validation;validation-of-different-sections-in-the-portal-for-admin-profile;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 10788000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6124000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 279000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify if \"Generator Hourly Log - Main\" report links are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Generator Hourly Log - Main",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.BaseDriver.verifyReportLogsion(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 15832000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on the \"Generator Hourly Log - Main\" link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Generator Hourly Log - Main",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.clickReportLogs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5571000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "verify if \"Generator Hourly Log - Main\" Report log page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Generator Hourly Log - Main",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.verifyScaffoldReportLog(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6158000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Logout of the application",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.logout_of_the_application()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T15:50:47.237Z",
+        "line": 17,
+        "name": "Validation of different sections in the Portal for admin profile",
+        "description": "",
+        "id": "log-reports-validation;validation-of-different-sections-in-the-portal-for-admin-profile;;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11220000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6084000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 389000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify if \"Generator Hourly Log - Check\" report links are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Generator Hourly Log - Check",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.BaseDriver.verifyReportLogsion(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 15659000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on the \"Generator Hourly Log - Check\" link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Generator Hourly Log - Check",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.clickReportLogs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5517000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "verify if \"Generator Hourly Log - Check\" Report log page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Generator Hourly Log - Check",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.verifyScaffoldReportLog(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6109000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Logout of the application",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.logout_of_the_application()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T15:51:32.215Z",
+        "line": 18,
+        "name": "Validation of different sections in the Portal for admin profile",
+        "description": "",
+        "id": "log-reports-validation;validation-of-different-sections-in-the-portal-for-admin-profile;;7",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11208000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6250000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 350000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify if \"Turbine Local Log\" report links are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Turbine Local Log",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.BaseDriver.verifyReportLogsion(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5446000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on the \"Turbine Local Log\" link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Turbine Local Log",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.clickReportLogs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5142000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "verify if \"Turbine Local Log\" Report log page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Turbine Local Log",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.verifyScaffoldReportLog(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6133000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Logout of the application",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.logout_of_the_application()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T15:52:06.777Z",
+        "line": 19,
+        "name": "Validation of different sections in the Portal for admin profile",
+        "description": "",
+        "id": "log-reports-validation;validation-of-different-sections-in-the-portal-for-admin-profile;;8",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11372000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6178000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 285000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify if \"MCR TG and WSC Log\" report links are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "MCR TG and WSC Log",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.BaseDriver.verifyReportLogsion(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 19992000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on the \"MCR TG and WSC Log\" link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "MCR TG and WSC Log",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.clickReportLogs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5153000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "verify if \"MCR TG and WSC Log\" Report log page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "MCR TG and WSC Log",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.verifyScaffoldReportLog(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6255000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Logout of the application",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.logout_of_the_application()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T15:52:56.014Z",
+        "line": 20,
+        "name": "Validation of different sections in the Portal for admin profile",
+        "description": "",
+        "id": "log-reports-validation;validation-of-different-sections-in-the-portal-for-admin-profile;;9",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11157000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6225000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 178000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify if \"Switchyard Energy Meter Hourly Log - Main\" report links are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Switchyard Energy Meter Hourly Log - Main",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.BaseDriver.verifyReportLogsion(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5493000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on the \"Switchyard Energy Meter Hourly Log - Main\" link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Switchyard Energy Meter Hourly Log - Main",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.clickReportLogs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5598000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "verify if \"Switchyard Energy Meter Hourly Log - Main\" Report log page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Switchyard Energy Meter Hourly Log - Main",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.verifyScaffoldReportLog(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6213000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Logout of the application",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.logout_of_the_application()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T15:53:30.896Z",
+        "line": 21,
+        "name": "Validation of different sections in the Portal for admin profile",
+        "description": "",
+        "id": "log-reports-validation;validation-of-different-sections-in-the-portal-for-admin-profile;;10",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11031000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6195000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 193000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify if \"Switchyard Energy Meter Hourly Log - Check\" report links are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Switchyard Energy Meter Hourly Log - Check",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.BaseDriver.verifyReportLogsion(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5553000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on the \"Switchyard Energy Meter Hourly Log - Check\" link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Switchyard Energy Meter Hourly Log - Check",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.clickReportLogs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5545000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "verify if \"Switchyard Energy Meter Hourly Log - Check\" Report log page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Switchyard Energy Meter Hourly Log - Check",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.verifyScaffoldReportLog(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6113000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Logout of the application",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.logout_of_the_application()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T15:54:05.535Z",
+        "line": 22,
+        "name": "Validation of different sections in the Portal for admin profile",
+        "description": "",
+        "id": "log-reports-validation;validation-of-different-sections-in-the-portal-for-admin-profile;;11",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 10818000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6211000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 366000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify if \"Switchyard Log - I\" report links are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Switchyard Log - I",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.BaseDriver.verifyReportLogsion(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 15324000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on the \"Switchyard Log - I\" link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Switchyard Log - I",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.clickReportLogs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5134000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "verify if \"Switchyard Log - I\" Report log page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Switchyard Log - I",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.verifyScaffoldReportLog(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6098000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Logout of the application",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.logout_of_the_application()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T15:54:49.496Z",
+        "line": 23,
+        "name": "Validation of different sections in the Portal for admin profile",
+        "description": "",
+        "id": "log-reports-validation;validation-of-different-sections-in-the-portal-for-admin-profile;;12",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 10990000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6285000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 238000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify if \"MCR Boiler Log\" report links are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "MCR Boiler Log",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.BaseDriver.verifyReportLogsion(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 11438000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on the \"MCR Boiler Log\" link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "MCR Boiler Log",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.clickReportLogs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5147000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "verify if \"MCR Boiler Log\" Report log page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "MCR Boiler Log",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.verifyScaffoldReportLog(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6269000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Logout of the application",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.logout_of_the_application()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T15:55:29.865Z",
+        "line": 24,
+        "name": "Validation of different sections in the Portal for admin profile",
+        "description": "",
+        "id": "log-reports-validation;validation-of-different-sections-in-the-portal-for-admin-profile;;13",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11100000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6100000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 171000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify if \"Boiler Local Log\" report links are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Boiler Local Log",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.BaseDriver.verifyReportLogsion(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5215000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on the \"Boiler Local Log\" link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Boiler Local Log",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.clickReportLogs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5141000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "verify if \"Boiler Local Log\" Report log page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Boiler Local Log",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.verifyScaffoldReportLog(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6188000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Logout of the application",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.logout_of_the_application()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T15:56:03.801Z",
+        "line": 25,
+        "name": "Validation of different sections in the Portal for admin profile",
+        "description": "",
+        "id": "log-reports-validation;validation-of-different-sections-in-the-portal-for-admin-profile;;14",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11360000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6222000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 243000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify if \"UPS - Log\" report links are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "UPS - Log",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.BaseDriver.verifyReportLogsion(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5058000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on the \"UPS - Log\" link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "UPS - Log",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.clickReportLogs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5139000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "verify if \"UPS - Log\" Report log page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "UPS - Log",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.verifyScaffoldReportLog(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6101000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Logout of the application",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.logout_of_the_application()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T15:56:37.932Z",
+        "line": 26,
+        "name": "Validation of different sections in the Portal for admin profile",
+        "description": "",
+        "id": "log-reports-validation;validation-of-different-sections-in-the-portal-for-admin-profile;;15",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11064000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6184000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 233000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify if \"MLDC Report Log\" report links are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "MLDC Report Log",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.BaseDriver.verifyReportLogsion(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 34727000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on the \"MLDC Report Log\" link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "MLDC Report Log",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.clickReportLogs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5128000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "verify if \"MLDC Report Log\" Report log page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "MLDC Report Log",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.verifyScaffoldReportLog(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6101000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Logout of the application",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.logout_of_the_application()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T15:57:41.370Z",
+        "line": 27,
+        "name": "Validation of different sections in the Portal for admin profile",
+        "description": "",
+        "id": "log-reports-validation;validation-of-different-sections-in-the-portal-for-admin-profile;;16",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11180000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6255000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 256000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify if \"Equipment Status Log\" report links are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Equipment Status Log",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.BaseDriver.verifyReportLogsion(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3527000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on the \"Equipment Status Log\" link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Equipment Status Log",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.clickReportLogs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5149000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "verify if \"Equipment Status Log\" Report log page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Equipment Status Log",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.verifyScaffoldReportLog(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6080000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Logout of the application",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.logout_of_the_application()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T15:58:13.818Z",
+        "line": 28,
+        "name": "Validation of different sections in the Portal for admin profile",
+        "description": "",
+        "id": "log-reports-validation;validation-of-different-sections-in-the-portal-for-admin-profile;;17",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11430000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6192000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 173000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify if \"Ash Handling Plant and FOPH Operator Assistant Log\" report links are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Ash Handling Plant and FOPH Operator Assistant Log",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.BaseDriver.verifyReportLogsion(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4876000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on the \"Ash Handling Plant and FOPH Operator Assistant Log\" link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Ash Handling Plant and FOPH Operator Assistant Log",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.clickReportLogs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5141000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "verify if \"Ash Handling Plant and FOPH Operator Assistant Log\" Report log page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Ash Handling Plant and FOPH Operator Assistant Log",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.verifyScaffoldReportLog(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6157000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Logout of the application",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.logout_of_the_application()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T15:58:47.787Z",
+        "line": 29,
+        "name": "Validation of different sections in the Portal for admin profile",
+        "description": "",
+        "id": "log-reports-validation;validation-of-different-sections-in-the-portal-for-admin-profile;;18",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11032000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6163000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 337000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify if \"Auxiliary Boiler Log\" report links are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Auxiliary Boiler Log",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.BaseDriver.verifyReportLogsion(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4951000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on the \"Auxiliary Boiler Log\" link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Auxiliary Boiler Log",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.clickReportLogs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5138000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "verify if \"Auxiliary Boiler Log\" Report log page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Auxiliary Boiler Log",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.verifyScaffoldReportLog(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6241000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Logout of the application",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.logout_of_the_application()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T15:59:21.657Z",
+        "line": 30,
+        "name": "Validation of different sections in the Portal for admin profile",
+        "description": "",
+        "id": "log-reports-validation;validation-of-different-sections-in-the-portal-for-admin-profile;;19",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 10988000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6243000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 196000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify if \"Balance of Plant Operator Assistant Log\" report links are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Balance of Plant Operator Assistant Log",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.BaseDriver.verifyReportLogsion(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4875000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on the \"Balance of Plant Operator Assistant Log\" link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Balance of Plant Operator Assistant Log",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.clickReportLogs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5144000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "verify if \"Balance of Plant Operator Assistant Log\" Report log page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Balance of Plant Operator Assistant Log",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.verifyScaffoldReportLog(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6060000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Logout of the application",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.logout_of_the_application()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T15:59:55.177Z",
+        "line": 31,
+        "name": "Validation of different sections in the Portal for admin profile",
+        "description": "",
+        "id": "log-reports-validation;validation-of-different-sections-in-the-portal-for-admin-profile;;20",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 10963000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6086000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 181000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify if \"Clarifier Chemical Dosing Monitoring Local Log\" report links are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Clarifier Chemical Dosing Monitoring Local Log",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.BaseDriver.verifyReportLogsion(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5010000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on the \"Clarifier Chemical Dosing Monitoring Local Log\" link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Clarifier Chemical Dosing Monitoring Local Log",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.clickReportLogs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5141000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "verify if \"Clarifier Chemical Dosing Monitoring Local Log\" Report log page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Clarifier Chemical Dosing Monitoring Local Log",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.verifyScaffoldReportLog(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6189000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Logout of the application",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.logout_of_the_application()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T16:00:28.750Z",
+        "line": 32,
+        "name": "Validation of different sections in the Portal for admin profile",
+        "description": "",
+        "id": "log-reports-validation;validation-of-different-sections-in-the-portal-for-admin-profile;;21",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 10782000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6217000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 351000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify if \"Balance of Plant Log\" report links are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Balance of Plant Log",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.BaseDriver.verifyReportLogsion(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6997000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on the \"Balance of Plant Log\" link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Balance of Plant Log",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.clickReportLogs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5132000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "verify if \"Balance of Plant Log\" Report log page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Balance of Plant Log",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.verifyScaffoldReportLog(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6445000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Logout of the application",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.logout_of_the_application()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T16:01:04.674Z",
+        "line": 33,
+        "name": "Validation of different sections in the Portal for admin profile",
+        "description": "",
+        "id": "log-reports-validation;validation-of-different-sections-in-the-portal-for-admin-profile;;22",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11156000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6153000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 201000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify if \"Ash Handling Plant and FOPH Log\" report links are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Ash Handling Plant and FOPH Log",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.BaseDriver.verifyReportLogsion(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 7431000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on the \"Ash Handling Plant and FOPH Log\" link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Ash Handling Plant and FOPH Log",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.clickReportLogs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5151000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "verify if \"Ash Handling Plant and FOPH Log\" Report log page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Ash Handling Plant and FOPH Log",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.verifyScaffoldReportLog(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6208000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Logout of the application",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.logout_of_the_application()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T16:01:40.974Z",
+        "line": 34,
+        "name": "Validation of different sections in the Portal for admin profile",
+        "description": "",
+        "id": "log-reports-validation;validation-of-different-sections-in-the-portal-for-admin-profile;;23",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11050000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6115000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 195000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify if \"Lignite Handling Plant Log\" report links are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Lignite Handling Plant Log",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.BaseDriver.verifyReportLogsion(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 7493000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on the \"Lignite Handling Plant Log\" link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Lignite Handling Plant Log",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.clickReportLogs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5140000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "verify if \"Lignite Handling Plant Log\" Report log page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Lignite Handling Plant Log",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.verifyScaffoldReportLog(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6183000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Logout of the application",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.logout_of_the_application()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T16:02:17.158Z",
+        "line": 35,
+        "name": "Validation of different sections in the Portal for admin profile",
+        "description": "",
+        "id": "log-reports-validation;validation-of-different-sections-in-the-portal-for-admin-profile;;24",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 10778000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6228000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 350000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify if \"DM Plant Log\" report links are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "DM Plant Log",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.BaseDriver.verifyReportLogsion(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5062000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on the \"DM Plant Log\" link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "DM Plant Log",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.clickReportLogs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5151000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "verify if \"DM Plant Log\" Report log page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "DM Plant Log",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.verifyScaffoldReportLog(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6233000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Logout of the application",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.logout_of_the_application()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T16:02:50.969Z",
+        "line": 36,
+        "name": "Validation of different sections in the Portal for admin profile",
+        "description": "",
+        "id": "log-reports-validation;validation-of-different-sections-in-the-portal-for-admin-profile;;25",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11046000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6265000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 210000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify if \"Shutdown Log\" report links are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Shutdown Log",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.BaseDriver.verifyReportLogsion(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5171000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on the \"Shutdown Log\" link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Shutdown Log",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.clickReportLogs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5148000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "verify if \"Shutdown Log\" Report log page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Shutdown Log",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.verifyScaffoldReportLog(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6139000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Logout of the application",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.logout_of_the_application()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T16:03:24.956Z",
+        "line": 37,
+        "name": "Validation of different sections in the Portal for admin profile",
+        "description": "",
+        "id": "log-reports-validation;validation-of-different-sections-in-the-portal-for-admin-profile;;26",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11007000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6216000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 311000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify if \"24 Hours - Switchyard\" report links are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "24 Hours - Switchyard",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.BaseDriver.verifyReportLogsion(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2020000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on the \"24 Hours - Switchyard\" link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "24 Hours - Switchyard",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.clickReportLogs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5138000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "verify if \"24 Hours - Switchyard\" Report log page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "24 Hours - Switchyard",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.verifyScaffoldReportLog(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6164000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Logout of the application",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.logout_of_the_application()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T16:03:55.820Z",
+        "line": 38,
+        "name": "Validation of different sections in the Portal for admin profile",
+        "description": "",
+        "id": "log-reports-validation;validation-of-different-sections-in-the-portal-for-admin-profile;;27",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11070000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6203000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 178000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify if \"24 Hours - Boiler DCS\" report links are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "24 Hours - Boiler DCS",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.BaseDriver.verifyReportLogsion(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2103000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on the \"24 Hours - Boiler DCS\" link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "24 Hours - Boiler DCS",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.clickReportLogs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5151000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "verify if \"24 Hours - Boiler DCS\" Report log page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "24 Hours - Boiler DCS",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.verifyScaffoldReportLog(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6035000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Logout of the application",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.logout_of_the_application()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T16:04:26.561Z",
+        "line": 39,
+        "name": "Validation of different sections in the Portal for admin profile",
+        "description": "",
+        "id": "log-reports-validation;validation-of-different-sections-in-the-portal-for-admin-profile;;28",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 10883000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6158000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 180000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify if \"24 Hours - Turbine DCS\" report links are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "24 Hours - Turbine DCS",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.BaseDriver.verifyReportLogsion(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2001000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on the \"24 Hours - Turbine DCS\" link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "24 Hours - Turbine DCS",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.clickReportLogs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5162000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "verify if \"24 Hours - Turbine DCS\" Report log page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "24 Hours - Turbine DCS",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.verifyScaffoldReportLog(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6172000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Logout of the application",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.logout_of_the_application()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T16:04:57.118Z",
+        "line": 40,
+        "name": "Validation of different sections in the Portal for admin profile",
+        "description": "",
+        "id": "log-reports-validation;validation-of-different-sections-in-the-portal-for-admin-profile;;29",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11217000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6123000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 178000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify if \"24 Hours- Switchyard (PLCC)\" report links are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "24 Hours- Switchyard (PLCC)",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.BaseDriver.verifyReportLogsion(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2160000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on the \"24 Hours- Switchyard (PLCC)\" link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "24 Hours- Switchyard (PLCC)",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.clickReportLogs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5141000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "verify if \"24 Hours- Switchyard (PLCC)\" Report log page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "24 Hours- Switchyard (PLCC)",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.verifyScaffoldReportLog(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6152000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Logout of the application",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.logout_of_the_application()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T16:05:28.098Z",
+        "line": 41,
+        "name": "Validation of different sections in the Portal for admin profile",
+        "description": "",
+        "id": "log-reports-validation;validation-of-different-sections-in-the-portal-for-admin-profile;;30",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 12269000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6148000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 335000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify if \"24 Hours- AHP\" report links are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "24 Hours- AHP",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.BaseDriver.verifyReportLogsion(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2088000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on the \"24 Hours- AHP\" link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "24 Hours- AHP",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.clickReportLogs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5139000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "verify if \"24 Hours- AHP\" Report log page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "24 Hours- AHP",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.verifyScaffoldReportLog(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6165000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Logout of the application",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.logout_of_the_application()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T16:06:00.259Z",
+        "line": 42,
+        "name": "Validation of different sections in the Portal for admin profile",
+        "description": "",
+        "id": "log-reports-validation;validation-of-different-sections-in-the-portal-for-admin-profile;;31",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11009000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6202000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 174000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify if \"24 Hours- Boiler Field\" report links are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "24 Hours- Boiler Field",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.BaseDriver.verifyReportLogsion(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2193000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on the \"24 Hours- Boiler Field\" link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "24 Hours- Boiler Field",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.clickReportLogs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5141000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "verify if \"24 Hours- Boiler Field\" Report log page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "24 Hours- Boiler Field",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.verifyScaffoldReportLog(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6247000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Logout of the application",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.logout_of_the_application()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T16:06:31.230Z",
+        "line": 43,
+        "name": "Validation of different sections in the Portal for admin profile",
+        "description": "",
+        "id": "log-reports-validation;validation-of-different-sections-in-the-portal-for-admin-profile;;32",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 10865000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6179000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 365000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify if \"24 Hours- LHP\" report links are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "24 Hours- LHP",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.BaseDriver.verifyReportLogsion(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2253000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on the \"24 Hours- LHP\" link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "24 Hours- LHP",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.clickReportLogs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5152000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "verify if \"24 Hours- LHP\" Report log page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "24 Hours- LHP",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.verifyScaffoldReportLog(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6274000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Logout of the application",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.logout_of_the_application()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T16:07:02.319Z",
+        "line": 44,
+        "name": "Validation of different sections in the Portal for admin profile",
+        "description": "",
+        "id": "log-reports-validation;validation-of-different-sections-in-the-portal-for-admin-profile;;33",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11358000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6202000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 372000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify if \"24 Hours- Turbine Local\" report links are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "24 Hours- Turbine Local",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.BaseDriver.verifyReportLogsion(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2215000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on the \"24 Hours- Turbine Local\" link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "24 Hours- Turbine Local",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.clickReportLogs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5147000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "verify if \"24 Hours- Turbine Local\" Report log page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "24 Hours- Turbine Local",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.verifyScaffoldReportLog(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6229000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Logout of the application",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.logout_of_the_application()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T16:07:33.847Z",
+        "line": 45,
+        "name": "Validation of different sections in the Portal for admin profile",
+        "description": "",
+        "id": "log-reports-validation;validation-of-different-sections-in-the-portal-for-admin-profile;;34",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11000000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6184000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 373000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify if \"24 Hours- DM and BOPP\" report links are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "24 Hours- DM and BOPP",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.BaseDriver.verifyReportLogsion(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2272000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on the \"24 Hours- DM and BOPP\" link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "24 Hours- DM and BOPP",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.clickReportLogs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5144000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "verify if \"24 Hours- DM and BOPP\" Report log page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "24 Hours- DM and BOPP",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.verifyScaffoldReportLog(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6159000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Logout of the application",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.logout_of_the_application()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T16:08:04.988Z",
+        "line": 46,
+        "name": "Validation of different sections in the Portal for admin profile",
+        "description": "",
+        "id": "log-reports-validation;validation-of-different-sections-in-the-portal-for-admin-profile;;35",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11126000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6224000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 320000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify if \"Day Shift - DM Plant Log\" report links are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Day Shift - DM Plant Log",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.BaseDriver.verifyReportLogsion(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3242000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on the \"Day Shift - DM Plant Log\" link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Day Shift - DM Plant Log",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.clickReportLogs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5136000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "verify if \"Day Shift - DM Plant Log\" Report log page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Day Shift - DM Plant Log",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.verifyScaffoldReportLog(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6325000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Logout of the application",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.logout_of_the_application()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T16:08:37.362Z",
+        "line": 47,
+        "name": "Validation of different sections in the Portal for admin profile",
+        "description": "",
+        "id": "log-reports-validation;validation-of-different-sections-in-the-portal-for-admin-profile;;36",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11195000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6233000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 331000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify if \"Equipment Change Over Log\" report links are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Equipment Change Over Log",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.BaseDriver.verifyReportLogsion(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3492000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on the \"Equipment Change Over Log\" link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Equipment Change Over Log",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.clickReportLogs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5548000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "verify if \"Equipment Change Over Log\" Report log page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Equipment Change Over Log",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.ReportLogs.verifyScaffoldReportLog(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6262000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Logout of the application",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.logout_of_the_application()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Log Reports Validation",
+    "description": "",
+    "id": "log-reports-validation",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/WebAdmin/Generic/LogReportsValidation-Generic.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2022-04-13T16:09:10.423Z",
+        "line": 13,
+        "name": "Verify if user is able to login with valid Admin credentials",
+        "description": "",
+        "id": "login-page-validation;verify-if-user-is-able-to-login-with-valid-admin-credentials;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 7177000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Navigate to scaffold v2 web application",
+            "match": {
+              "location": "stepDefinitions.LoginPageValidations.Navigatetoscaffoldwebapplication()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 48000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Verify if login screen is displayed",
+            "match": {
+              "location": "stepDefinitions.LoginPageValidations.loginscreendisplayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 263000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I enter the username \"vinod.r@deliverain.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"vinod.r@deliverain.com\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinitions.LoginPageValidations.Enterusername(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 145000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I enter the password \"Test@123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Test@123\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinitions.LoginPageValidations.Enterpassword(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4069000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I click on login button",
+            "match": {
+              "location": "stepDefinitions.LoginPageValidations.Clickonloginbutton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6176000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T16:09:28.321Z",
+        "line": 25,
+        "name": "Verify if user is able to login with valid Reporter credentials",
+        "description": "",
+        "id": "login-page-validation;verify-if-user-is-able-to-login-with-valid-reporter-credentials;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 7120000000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Navigate to scaffold v2 web application",
+            "match": {
+              "location": "stepDefinitions.LoginPageValidations.Navigatetoscaffoldwebapplication()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 47000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "Verify if login screen is displayed",
+            "match": {
+              "location": "stepDefinitions.LoginPageValidations.loginscreendisplayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 272000000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "I enter the username \"preeti.p@deliverain.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"preeti.p@deliverain.com\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinitions.LoginPageValidations.Enterusername(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 152000000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I enter the password \"Test@123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Test@123\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinitions.LoginPageValidations.Enterpassword(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6867000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I click on login button",
+            "match": {
+              "location": "stepDefinitions.LoginPageValidations.Clickonloginbutton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6377000000,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T16:09:49.173Z",
+        "line": 38,
+        "name": "Verify if user is able to login with invalid credentials",
+        "description": "",
+        "id": "login-page-validation;verify-if-user-is-able-to-login-with-invalid-credentials;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 7165000000,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "Navigate to scaffold v2 web application",
+            "match": {
+              "location": "stepDefinitions.LoginPageValidations.Navigatetoscaffoldwebapplication()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 47000000,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "Verify if login screen is displayed",
+            "match": {
+              "location": "stepDefinitions.LoginPageValidations.loginscreendisplayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 294000000,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "I enter the username \"xcvp@deliverain.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"xcvp@deliverain.com\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinitions.LoginPageValidations.Enterusername(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 199000000,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "I enter the password \"Test@\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Test@\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinitions.LoginPageValidations.Enterpassword(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1053000000,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "I click on login button",
+            "match": {
+              "location": "stepDefinitions.LoginPageValidations.Clickonloginbutton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 59000000,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "verify if error message \"Incorrect Email or Password\" displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Incorrect Email or Password\"",
+                  "offset": 24
+                }
+              ],
+              "location": "stepDefinitions.LoginPageValidations.Verifyloginerrormessage(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T16:09:57.990Z",
+        "line": 50,
+        "name": "Verify if error message is displayed if username and password are not entered",
+        "description": "",
+        "id": "login-page-validation;verify-if-error-message-is-displayed-if-username-and-password-are-not-entered;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 7229000000,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "Navigate to scaffold v2 web application",
+            "match": {
+              "location": "stepDefinitions.LoginPageValidations.Navigatetoscaffoldwebapplication()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 55000000,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "Verify if login screen is displayed",
+            "match": {
+              "location": "stepDefinitions.LoginPageValidations.loginscreendisplayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 187000000,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "I enter the username \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinitions.LoginPageValidations.Enterusername(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 199000000,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "I enter the password \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinitions.LoginPageValidations.Enterpassword(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 117000000,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "I click on login button",
+            "match": {
+              "location": "stepDefinitions.LoginPageValidations.Clickonloginbutton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 178000000,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "verify if error message \"Username field is required\" \"Password field is required\" displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Username field is required\"",
+                  "offset": 24
+                },
+                {
+                  "val": "\"Password field is required\"",
+                  "offset": 53
+                }
+              ],
+              "location": "stepDefinitions.LoginPageValidations.Verifyerrormessageifnousernameandpassword(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T16:10:05.958Z",
+        "line": 62,
+        "name": "Verify if error message is displayed if username is not entered",
+        "description": "",
+        "id": "login-page-validation;verify-if-error-message-is-displayed-if-username-is-not-entered;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 7195000000,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "Navigate to scaffold v2 web application",
+            "match": {
+              "location": "stepDefinitions.LoginPageValidations.Navigatetoscaffoldwebapplication()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 41000000,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "Verify if login screen is displayed",
+            "match": {
+              "location": "stepDefinitions.LoginPageValidations.loginscreendisplayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 126000000,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "I enter the username \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinitions.LoginPageValidations.Enterusername(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 241000000,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "I enter the password \"Test@123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Test@123\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinitions.LoginPageValidations.Enterpassword(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 118000000,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "I click on login button",
+            "match": {
+              "location": "stepDefinitions.LoginPageValidations.Clickonloginbutton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 49000000,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "verify if error message \"Username field is required\" displayed for blank username field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Username field is required\"",
+                  "offset": 24
+                }
+              ],
+              "location": "stepDefinitions.LoginPageValidations.Verifyerrormessageifnousername(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T16:10:13.730Z",
+        "line": 74,
+        "name": "Verify if error message is displayed if password is not entered",
+        "description": "",
+        "id": "login-page-validation;verify-if-error-message-is-displayed-if-password-is-not-entered;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 7084000000,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "Navigate to scaffold v2 web application",
+            "match": {
+              "location": "stepDefinitions.LoginPageValidations.Navigatetoscaffoldwebapplication()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 44000000,
+              "status": "passed"
+            },
+            "line": 66,
+            "name": "Verify if login screen is displayed",
+            "match": {
+              "location": "stepDefinitions.LoginPageValidations.loginscreendisplayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 311000000,
+              "status": "passed"
+            },
+            "line": 67,
+            "name": "I enter the username \"preeti.p@deliverain.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"preeti.p@deliverain.com\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinitions.LoginPageValidations.Enterusername(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 158000000,
+              "status": "passed"
+            },
+            "line": 68,
+            "name": "I enter the password \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinitions.LoginPageValidations.Enterpassword(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 109000000,
+              "status": "passed"
+            },
+            "line": 69,
+            "name": "I click on login button",
+            "match": {
+              "location": "stepDefinitions.LoginPageValidations.Clickonloginbutton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 43000000,
+              "status": "passed"
+            },
+            "line": 70,
+            "name": "verify if error message \"Password field is required\" displayed for blank password field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Password field is required\"",
+                  "offset": 24
+                }
+              ],
+              "location": "stepDefinitions.LoginPageValidations.Verifyerrormessageifnopassword(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login Page Validation",
+    "description": "",
+    "id": "login-page-validation",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/WebAdmin/Generic/LoginPageValidations.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2022-04-13T16:10:21.485Z",
+        "line": 11,
+        "name": "Validation of different sections in the Portal for admin profile",
+        "description": "",
+        "id": "report-logs---general;validation-of-different-sections-in-the-portal-for-admin-profile;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 10861000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6229000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 539000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify if \"Home\" section is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Home",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.BaseDriver.verifyScaffoldWebAppsection(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6161000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Logout of the application",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.logout_of_the_application()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T16:10:45.279Z",
+        "line": 12,
+        "name": "Validation of different sections in the Portal for admin profile",
+        "description": "",
+        "id": "report-logs---general;validation-of-different-sections-in-the-portal-for-admin-profile;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 10978000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6260000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 683000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify if \"Administration\" section is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Administration",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.BaseDriver.verifyScaffoldWebAppsection(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6205000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Logout of the application",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.logout_of_the_application()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T16:11:09.405Z",
+        "line": 13,
+        "name": "Validation of different sections in the Portal for admin profile",
+        "description": "",
+        "id": "report-logs---general;validation-of-different-sections-in-the-portal-for-admin-profile;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11084000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6200000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 726000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify if \"Analytics\" section is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Analytics",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.BaseDriver.verifyScaffoldWebAppsection(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6008000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Logout of the application",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.logout_of_the_application()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T16:11:33.423Z",
+        "line": 14,
+        "name": "Validation of different sections in the Portal for admin profile",
+        "description": "",
+        "id": "report-logs---general;validation-of-different-sections-in-the-portal-for-admin-profile;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 10806000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6162000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 775000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify if \"Report\" section is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Report",
+                  "offset": 11
+                }
+              ],
+              "location": "stepDefinitions.BaseDriver.verifyScaffoldWebAppsection(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6096000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Logout of the application",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.logout_of_the_application()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      }
+    ],
+    "name": "Report logs - General",
+    "description": "",
+    "id": "report-logs---general",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/WebAdmin/Generic/ReportLogsGeneric.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2022-04-13T16:11:57.270Z",
+        "line": 9,
+        "name": "Verify if all headers are displayed in the table",
+        "description": "",
+        "id": "user-list--validations;verify-if-all-headers-are-displayed-in-the-table;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 10931000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6267000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 530000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify All headers \"First Name\" are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"First Name\"",
+                  "offset": 19
+                }
+              ],
+              "location": "stepDefinitions.UserListValidations.Verifyallheaders(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T16:12:14.998Z",
+        "line": 10,
+        "name": "Verify if all headers are displayed in the table",
+        "description": "",
+        "id": "user-list--validations;verify-if-all-headers-are-displayed-in-the-table;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11342000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6183000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 532000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify All headers \"Email\" are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Email\"",
+                  "offset": 19
+                }
+              ],
+              "location": "stepDefinitions.UserListValidations.Verifyallheaders(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T16:12:33.056Z",
+        "line": 11,
+        "name": "Verify if all headers are displayed in the table",
+        "description": "",
+        "id": "user-list--validations;verify-if-all-headers-are-displayed-in-the-table;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11057000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6154000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 469000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify All headers \"Role\" are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Role\"",
+                  "offset": 19
+                }
+              ],
+              "location": "stepDefinitions.UserListValidations.Verifyallheaders(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T16:12:50.736Z",
+        "line": 12,
+        "name": "Verify if all headers are displayed in the table",
+        "description": "",
+        "id": "user-list--validations;verify-if-all-headers-are-displayed-in-the-table;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11137000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6200000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 704000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify All headers \"Location\" are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Location\"",
+                  "offset": 19
+                }
+              ],
+              "location": "stepDefinitions.UserListValidations.Verifyallheaders(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T16:13:08.777Z",
+        "line": 13,
+        "name": "Verify if all headers are displayed in the table",
+        "description": "",
+        "id": "user-list--validations;verify-if-all-headers-are-displayed-in-the-table;;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11262000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6204000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 712000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify All headers \"Shift\" are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Shift\"",
+                  "offset": 19
+                }
+              ],
+              "location": "stepDefinitions.UserListValidations.Verifyallheaders(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T16:13:26.955Z",
+        "line": 14,
+        "name": "Verify if all headers are displayed in the table",
+        "description": "",
+        "id": "user-list--validations;verify-if-all-headers-are-displayed-in-the-table;;7",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11087000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6219000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 694000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify All headers \"Phone\" are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phone\"",
+                  "offset": 19
+                }
+              ],
+              "location": "stepDefinitions.UserListValidations.Verifyallheaders(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T16:13:44.956Z",
+        "line": 15,
+        "name": "Verify if all headers are displayed in the table",
+        "description": "",
+        "id": "user-list--validations;verify-if-all-headers-are-displayed-in-the-table;;8",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11033000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6209000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 752000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verify All headers \"Action\" are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Action\"",
+                  "offset": 19
+                }
+              ],
+              "location": "stepDefinitions.UserListValidations.Verifyallheaders(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T16:14:02.950Z",
+        "line": 28,
+        "name": "Verify Action is displayed in the table",
+        "description": "",
+        "id": "user-list--validations;verify-action-is-displayed-in-the-table;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 7221000000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "Navigate to scaffold v2 web application",
+            "match": {
+              "location": "stepDefinitions.LoginPageValidations.Navigatetoscaffoldwebapplication()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 47000000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "Verify if login screen is displayed",
+            "match": {
+              "location": "stepDefinitions.LoginPageValidations.loginscreendisplayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 308000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I enter the username \"vinod.r@deliverain.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"vinod.r@deliverain.com\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinitions.LoginPageValidations.Enterusername(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 126000000,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I enter the password \"Test@123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Test@123\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinitions.LoginPageValidations.Enterpassword(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3894000000,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "I click on login button",
+            "match": {
+              "location": "stepDefinitions.LoginPageValidations.Clickonloginbutton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6393000000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 617000000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "verify Action buttons are displayed",
+            "match": {
+              "location": "stepDefinitions.UserListValidations.Verifyactionbuttonds()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T16:14:21.557Z",
+        "line": 32,
+        "name": "Verify if the newly added record is deleted",
+        "description": "",
+        "id": "user-list--validations;verify-if-the-newly-added-record-is-deleted",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 10510000000,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6171000000,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2074000000,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "Click on Add Record button",
+            "match": {
+              "location": "stepDefinitions.UserListValidations.Clickonaddrecordbutton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7651000000,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "I Create user",
+            "match": {
+              "location": "stepDefinitions.UserListValidations.Createuser()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6124000000,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "I delete a record",
+            "match": {
+              "location": "stepDefinitions.UserListValidations.Ideleterecord()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T16:14:54.094Z",
+        "line": 42,
+        "name": "Verify if the newly added record is edited",
+        "description": "",
+        "id": "user-list--validations;verify-if-the-newly-added-record-is-edited",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11410000000,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6246000000,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2077000000,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "Click on Add Record button",
+            "match": {
+              "location": "stepDefinitions.UserListValidations.Clickonaddrecordbutton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7486000000,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "I Create user",
+            "match": {
+              "location": "stepDefinitions.UserListValidations.Createuser()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5890000000,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "Click on edit",
+            "match": {
+              "location": "stepDefinitions.UserListValidations.Clickonedit()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5516000000,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "I edit a record",
+            "match": {
+              "location": "stepDefinitions.UserListValidations.Editrecord()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 82000000,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "Verify the changes",
+            "match": {
+              "location": "stepDefinitions.UserListValidations.Verifthechanges()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-13T16:15:32.807Z",
+        "line": 51,
+        "name": "Verify user list page is displayed if cancel button is click on create user page",
+        "description": "",
+        "id": "user-list--validations;verify-user-list-page-is-displayed-if-cancel-button-is-click-on-create-user-page",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11397000000,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "Login into Scaffold Log Automation Application As Admin",
+            "match": {
+              "location": "stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application_as_admin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6152000000,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "verify if user logged in sucessfully",
+            "match": {
+              "location": "stepDefinitions.BaseDriver.verfiylogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2122000000,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "Click on Add Record button",
+            "match": {
+              "location": "stepDefinitions.UserListValidations.Clickonaddrecordbutton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6368000000,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "Click on cancel button on create user page",
+            "match": {
+              "location": "stepDefinitions.UserListValidations.Clickoncancelbutton()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3142000000,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "Verify the user list page",
+            "match": {
+              "location": "stepDefinitions.UserListValidations.Verifyuserlistpage()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "User List  Validations",
+    "description": "",
+    "id": "user-list--validations",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/WebAdmin/Generic/UserListValidations.feature",
+    "tags": []
+  }
+]
