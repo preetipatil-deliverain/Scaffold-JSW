@@ -43,7 +43,7 @@ public class UserListValidations {
 	public void Verifyactionbuttonds() {
 		boolean Edit = driver.findElement(By.linkText("Edit")).isDisplayed();
 		System.out.print("Edit is displayed"+Edit);
-		boolean Delete = driver.findElement(By.linkText("Delete")).isDisplayed();
+		boolean Delete = driver.findElement(By.xpath("//div[@id='logContainer']//tr//span[text()='Delete']")).isDisplayed();
 		System.out.print("Delete is displayed"+Delete);
 	}
 	
@@ -99,7 +99,21 @@ public class UserListValidations {
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("window.scrollBy(0,250)");
 		
-		driver.findElement(By.xpath("(//div[@id='logContainer']//tr//a[text()='Delete'])[last()]")).click();
+		driver.findElement(By.xpath("(//div[@id='logContainer']//tr//span[text()='Delete'])[last()]")).click();
+		driver.findElement(By.xpath("//button[text()='Yes']")).click();
+		
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		String changes=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='snackbar']"))).getText();
+		Assert.assertEquals(changes, "Delete User Successful");
+		System.out.print("last record is Deleted");	
+	}
+	
+	@And("Verify the record is deleted successfuly")
+	public void Verifyrecorddeleted() throws InterruptedException {
+		
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		String changes=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='snackbar']"))).getText();
+		Assert.assertEquals(changes, "Delete User Successful");
 		System.out.print("last record is Deleted");	
 	}
 	
