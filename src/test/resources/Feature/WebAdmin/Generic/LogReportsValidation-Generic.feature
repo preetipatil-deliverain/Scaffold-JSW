@@ -22,7 +22,7 @@ Examples:
 |Switchyard Log - I|
 |MCR Boiler Log|
 |Boiler Local Log|
-|UPS - Log|
+|UPS and Transformer - Log|
 |MLDC Report Log|
 |Equipment Status Log|
 |Ash Handling Plant and FOPH Operator Assistant Log|

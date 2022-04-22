@@ -4,7 +4,6 @@
   <test name="Surefire test">
     <classes>
       <class name="Runners.TestRunner"/>
-      <class name="ScaffoldAPI.APIValidation.AppTest"/>
     </classes>
   </test> <!-- Surefire test -->
 </suite> <!-- Failed suite [Surefire suite] -->

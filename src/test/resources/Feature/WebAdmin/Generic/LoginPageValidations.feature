@@ -24,7 +24,7 @@ Feature: Login Page Validation
   
   Examples:
   | Username               | Password |
-  | preeti.p@deliverain.com | Test@123 |
+  | deepa.k@deliverain.com | Test@123 |
   
   
   Scenario Outline: Verify if user is able to login with invalid credentials
@@ -34,7 +34,7 @@ Feature: Login Page Validation
   And I enter the password "<Password>"
   And I click on login button
   And verify if error message "<Message>" displayed
-  Then Logout of the application
+ 
   
   Examples:
   | Username               | Password |Message|
@@ -47,7 +47,7 @@ Feature: Login Page Validation
   And I enter the password "<Password>"
   And I click on login button
   Then verify if error message "<Message1>" "<Message2>" displayed
-  Then Logout of the application
+ 
   
   Examples:
   | Username               | Password |Message1|Message2|
@@ -60,7 +60,7 @@ Feature: Login Page Validation
   And I enter the password "<Password>"
   And I click on login button
   Then verify if error message "<Message1>" displayed for blank username field
-  Then Logout of the application
+ 
   
   Examples:
   | Username               | Password |Message1|
@@ -73,11 +73,10 @@ Feature: Login Page Validation
   And I enter the password "<Password>"
   And I click on login button
   Then verify if error message "<Message1>" displayed for blank password field
-  Then Logout of the application
+ 
   
   Examples:
   | Username               | Password |Message1|
   |preeti.p@deliverain.com |  |Password field is required|
-  
-  
+ 
   
