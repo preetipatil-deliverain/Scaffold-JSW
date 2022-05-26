@@ -9,7 +9,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 @RunWith(Cucumber.class)
 
 @CucumberOptions(
-		features = {"src\\test\\resources\\Feature\\WebAdmin\\Generic"},
+		features = {"src\\test\\resources\\Feature\\WebAdmin\\LogSetup"},
 		glue = {"stepDefinitions","Utility"},
 		plugin = {
 				"pretty",

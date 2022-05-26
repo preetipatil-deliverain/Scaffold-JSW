@@ -78,5 +78,3 @@ Feature: Login Page Validation
   Examples:
   | Username               | Password |Message1|
   |preeti.p@deliverain.com |  |Password field is required|
- 
-  

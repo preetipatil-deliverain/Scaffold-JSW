@@ -1,6 +1,6 @@
-Feature: GeneratorLog
+Feature: 24HrLog Setup Validation
 
-Scenario: Generator Main log display and validations
+Scenario: 24HrLog Setup Display and Validation
 Given Login into Scaffold Log Automation Application As Admin
 And verify if user logged in sucessfully
 Then Navigate to Generator Main Log Report

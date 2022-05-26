@@ -1,7 +1,7 @@
 Feature: Log Reports Validation
 
 Scenario Outline: Validation of different sections in the Portal for admin profile
-Given Login into Scaffold Log Automation Application As Admin
+Given Login into Scaffold Log Automation Application As "Admin"
 And verify if user logged in sucessfully
 Then verify if "<ReportLink>" report links are displayed
 And click on the "<ReportLink>" link
@@ -10,7 +10,6 @@ Then Logout of the application
 
 Examples:
 |ReportLink|
-|24Hr Log Report|
 |Consolidated Reports|
 |Water Steam Cycle Local Log|
 |Generator Hourly Log - Main|
@@ -34,7 +33,7 @@ Examples:
 |Lignite Handling Plant Log|
 |DM Plant Log|
 |Shutdown Log|
-|24 Hours - Switchyard|
+|24 Hours- Switchyard (PLCC)|
 |24 Hours - Boiler DCS|
 |24 Hours - Turbine DCS|
 |24 Hours- Switchyard (PLCC)|
@@ -45,3 +44,4 @@ Examples:
 |24 Hours- DM and BOPP|
 |Day Shift - DM Plant Log|
 |Equipment Change Over Log|
+|Main Boiler Lancing Parameters|
