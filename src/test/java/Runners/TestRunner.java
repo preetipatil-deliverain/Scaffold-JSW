@@ -9,7 +9,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 @RunWith(Cucumber.class)
 
 @CucumberOptions(
-		features = {"src\\test\\resources\\Feature\\WebAdmin\\LogSetup"},
+		features = {"src\\test\\resources\\Feature\\WebAdmin\\Enquiry_HR\\Create_Enquiry_HR.feature"},		
 		glue = {"stepDefinitions","Utility"},
 		plugin = {
 				"pretty",
@@ -17,7 +17,9 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 				"html:target/cucumber-report/cucumber.html"},
 		monochrome = true,
 		publish = false
+		//tags = "@Batch1"
 		)
 
 public class TestRunner {
+	
 }

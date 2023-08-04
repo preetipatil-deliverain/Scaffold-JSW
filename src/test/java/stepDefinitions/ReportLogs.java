@@ -23,13 +23,13 @@ public class ReportLogs{
 		System.out.println(string);
 		Thread.sleep(5000);
 		switch(string) {
-		case "24Hr Log Report":
-			strHeader = driver.findElement(By.id("dashboard_embeddedbi_title")).getText();
+		case "Plant Summary":
+			strHeader = driver.findElement(By.xpath("/html/body/div[1]/main/div[1]/div[2]/div/div[2]/div[1]/div[1]/div")).getText();
 			if (strHeader.equals(string)){
 				System.out.println(string+" Report Log is displayed");
 			}else {
 				System.out.println(string+" Report Log is not displayed");
-				commonsteps.TakeScreenshot(string +"reportlognotdisplayed");
+//				commonsteps.TakeScreenshot(string +"report log not displayed");
 			}
 			break;
 		case "Consolidated Reports":		
@@ -38,17 +38,17 @@ public class ReportLogs{
 				System.out.println(string+" Report Log is displayed");
 			}else {
 				System.out.println(string+" Report Log is not displayed");
-				commonsteps.TakeScreenshot(string +"reportlognotdisplayed");
+//				commonsteps.TakeScreenshot(string +"report log not displayed");
 			}
 			break;
 		default:
-			strHeader = driver.findElement(By.cssSelector("#logContainer > form > div.row.f-13.fw-500.c-black > div.col-lg-4.f-14.my-auto")).getText();
+			strHeader = driver.findElement(By.xpath("//*[@id=\"logContainer\"]/form/div[1]/div[1]")).getText();
 			System.out.println(strHeader);
 			if (strHeader.contains(string)){
 				System.out.println(string+" Report Log is displayed");
 			}else {
 				System.out.println(string+" Report Log is not displayed");
-				commonsteps.TakeScreenshot(string +"reportlognotdisplayed");
+//				commonsteps.TakeScreenshot(string +"report log not displayed");
 			}	
 			break;
 		}
@@ -56,6 +56,7 @@ public class ReportLogs{
 
 	@And("^click on the \"(.*?)\" link$")
 	public void clickReportLogs(String string) throws InterruptedException, IOException {
+		Thread.sleep(500);
 		driver.findElement(By.linkText(string)).click();
 	}
 }

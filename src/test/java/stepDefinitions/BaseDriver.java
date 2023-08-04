@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
@@ -22,9 +23,12 @@ import io.restassured.response.Response;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+import com.aventstack.extentreports.Status;
 
 
-public class BaseDriver{
+public class BaseDriver extends CommonSteps{
 	private static final String USER_ID = "9b5f49ab-eea9-45f4-9d66-bcf56a531b85";
 	private static final String USERNAME = "Test"; //"TOOLSQA-Test";
 	private static final String PASSWORD = "Test@123";//"Test@@123";
@@ -37,74 +41,79 @@ public class BaseDriver{
 	WebDriver driver;
 	public static Scenario scenario;
 	CommonSteps commonsteps;
-
+	WebElement profile;
 	public BaseDriver(CommonSteps commonsteps) throws Exception{
 		driver=commonsteps.getDriver();		
 	}	
-
-	@And("verify if user logged in sucessfully")
+@Test
+	@And("Verify if user logged in sucessfully")
 	public void verfiylogin() throws InterruptedException {
 		// Write code here that turns the phrase above into concrete actions
-		Thread.sleep(5000);
+		
 		System.out.print("Login Validation");
-		driver.findElement(By.xpath("/html/body/div[1]/main/div/div[1]/div/a/img")).isDisplayed();
+		String Title=driver.getTitle();
+		Assert.assertEquals(Title, "Enquiry" );
+		System.out.println("Logged in successfully");
+		profile = driver.findElement(By.xpath("//img[@src='/img/default-avatar.svg']"));
+		profile.isDisplayed();
 		System.out.println("Profile image is displayed");
-		driver.findElement(By.linkText("Log out")).isDisplayed();
-		System.out.println("Log out is displayed");		
-		driver.findElement(By.xpath("/html/body/div[1]/main/div/div[1]/div/a/img")).isDisplayed();	
+		driver.findElement(By.xpath("//div[@id='cmp-logo']")).isDisplayed();	
 		System.out.println("Application logo is displayed");
-		//driver.findElement(By.xpath("/html/body/div[1]/main/div/div[1]/div/ul/li[1]/a/div/svg")).isDisplayed();
+		driver.findElement(By.xpath("//*[local-name()='svg']")).isDisplayed();
 		System.out.println("System Notification is displayed");
 		System.out.println("All the verification points were confirmed post login");
-		try {
-			commonsteps.TakeScreenshot("LoginSuccessful");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		try {
+//			commonsteps.TakeScreenshot("LoginSuccessful");
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		Assert.fail();
+//		test.log(Status.FAIL, "screenshot captured");
 	}
 
 	@Given("Logout of the application")
 	public void logout_of_the_application()throws InterruptedException  {
 		// Write code here that turns the phrase above into concrete actions
-		Thread.sleep(5000);
-		if (driver.findElement(By.xpath("/html/body/div[1]/main/div/div[1]/div/ul/li[3]/a")).isEnabled()) {
-			driver.findElement(By.xpath("/html/body/div[1]/main/div/div[1]/div/ul/li[3]/a")).click();
+		WebElement logout = driver.findElement(By.xpath("//img[@alt='Logout']"));
+		if (profile.isDisplayed()) {
+			profile.click();
+			logout.click();
+			
 		}else {
-			Thread.sleep(5000);
-			WebElement ele = driver.findElement(By.xpath("/html/body/div[1]/main/div/div[1]/div/ul/li[3]/a"));
+			
 			JavascriptExecutor executor = (JavascriptExecutor)driver;
-			executor.executeScript("arguments[0].click();", ele);
+			executor.executeScript("arguments[0].click();", logout);
 		}
-		try {
-			commonsteps.TakeScreenshot("LogoutSuccessful");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		try {
+////			commonsteps.TakeScreenshot("LogoutSuccessful");
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 	}
 
 	@When("^verify if \"(.*?)\" section is displayed$")
 	public void verifyScaffoldWebAppsection(String string) throws InterruptedException, IOException {
-		driver.findElement(By.xpath("//*[@id=\"toggleBtn\"]/img")).click();
+		//driver.findElement(By.xpath("//*[@id=\"toggleBtn\"]/img")).click();
 		boolean sectiondisplay = driver.findElement(By.linkText(string)).isDisplayed();
 		if (sectiondisplay == true) {
 			System.out.println(string+" Section is displayed");
-			commonsteps.TakeScreenshot(string +"sectiondisplayed");
+//			commonsteps.TakeScreenshot(string +"sectiondisplayed");
 		}else {
 			System.out.println(string+" Section is not displayed");
-			try {
-				commonsteps.TakeScreenshot(string +"sectionnotdisplayed");
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+//			try {
+//				commonsteps.TakeScreenshot(string +"sectionnotdisplayed");
+//			} catch (IOException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
 		}
 	}
 
 	@When("^verify if \"(.*?)\" report links are displayed$")
 	public void verifyReportLogsion(String string) throws InterruptedException, IOException {
-		driver.findElement(By.xpath("//*[@id=\"toggleBtn\"]/img")).click();
+		//driver.findElement(By.xpath("//*[@id=\"toggleBtn\"]/img")).click();
 		boolean sectiondisplay = driver.findElement(By.linkText(string)).isDisplayed();
 		if (sectiondisplay == true)
 			System.out.println(string+" Reportlog is displayed");

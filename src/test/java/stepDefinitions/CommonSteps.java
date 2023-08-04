@@ -2,6 +2,7 @@ package stepDefinitions;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Date;
 
 import javax.imageio.ImageIO;
 
@@ -15,6 +16,10 @@ import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.io.FileHandler;
+import org.testng.ITestResult;
+
+import com.aventstack.extentreports.ExtentTest;
 
 import Utility.Hooks;
 import cucumber.api.Scenario;
@@ -29,12 +34,12 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
 
-public class CommonSteps {
+public class CommonSteps implements Framework_constants{
 	public static WebDriver driver;
-	static String URL = "https://scaffold-dev.deliverain.io:5000/Login";
+	static String URL = "https://scaffold-dev.deliverain.io:8090/Login";
 	static BaseDriver basedriver;
 	static Scenario scenario;
-
+	public static ExtentTest test;
 
 	public static WebDriver getDriver() throws WebDriverException {	
 		//if (driver != null)
@@ -43,29 +48,30 @@ public class CommonSteps {
 		if (driver == null)
 			driver =new ChromeDriver();
 		driver.manage().window().maximize();
-		try {
-			TakeScreenshot("ScaffoldV2Applaunch");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		try {
+//			TakeScreenshot("ScaffoldV2Applaunch");
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 		return driver;
 	}
 
-	public static void TakeScreenshot(String FileName)
+	public static void TakeScreenshot(WebDriver driver,ITestResult result)
 			throws IOException
 	{
-		// Creating instance of File
-		File File = ((TakesScreenshot)driver)
-				.getScreenshotAs(OutputType.FILE);
-
-		FileUtils.copyFile(File,
-				new File("E:\\ScaffoldReport\\Scaffold\\AdminWebApp\\AdminWebApp\\AdminWebApp\\screenshots\\"
-						+ FileName + ".jpeg"));
-		byte[] file = ((TakesScreenshot)driver)
-				.getScreenshotAs(OutputType.BYTES);
-		//scenario.write("testing");//(file, "image/png");
-
+		Date date = new Date();
+		String actual_date=date.toString().replaceAll(":", "-");
+		TakesScreenshot ts=(TakesScreenshot)driver;
+		File src = ts.getScreenshotAs(OutputType.FILE);
+		File dst=new File(screenshot_path+actual_date+result.getName()+".jpeg");
+		try
+		{
+			FileHandler.copy(src, dst);
+		}
+		catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public static void launchBrowser(){

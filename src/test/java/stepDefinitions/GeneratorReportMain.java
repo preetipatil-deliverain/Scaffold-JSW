@@ -34,29 +34,29 @@ public class GeneratorReportMain{
 	@When("Login into Scaffold Log Automation Application As {string}")
 	public void login_into_scaffold_log_automation_application(String user) throws InterruptedException, IOException {
 		//Navigate to URL
-		Thread.sleep(2000);
+//		Thread.sleep(2000);
 		System.out.println("Driver"+driver);
 		System.out.println("Step 1");
 		CommonSteps.launchBrowser();
 		System.out.println("Scenario"+scenario);
-		Thread.sleep(3000);
+//		Thread.sleep(3000);
 		 switch(user){    
 		    //case statements within the switch block  
 		    case "Admin":
 		    	driver.findElement(By.id("user-name")).sendKeys("vinod.r@deliverain.com");
-				driver.findElement(By.id("password")).sendKeys("Test@123");
+				driver.findElement(By.id("password")).sendKeys("Test@1234");
 				driver.findElement(By.id("Submit")).click();		    	
 		    break;    
 		    case "Operator":
 		    	driver.findElement(By.id("user-name")).sendKeys("gokulrajesh.p@deliverain.com");
-				driver.findElement(By.id("password")).sendKeys("Test@123");
+				driver.findElement(By.id("password")).sendKeys("Test@1234");
 				driver.findElement(By.id("Submit")).click();
 		    break; 		     
 		    default:System.out.println("Login is not available");    
 		    } 
 		System.out.println("Logged in");
 		//scenario.write("Logged in");
-		commonsteps.TakeScreenshot("LoginSucessful");
+//		commonsteps.TakeScreenshot("LoginSucessful");
 	}
 
 	@Then("Navigate to Generator Main Log Report")

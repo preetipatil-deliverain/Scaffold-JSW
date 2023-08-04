@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Cucumber HTML Reports</td>
+        <td>1</td>
+      <td>01 Feb 2023, 15:32</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">stepDefinitions.BaseDriver.logout_of_the_application()</td>
+              <td>31</td>
+              <td class="duration" data-value="735973832">0.735</td>
+              <td class="duration" data-value="735973832">0.998</td>
+              <td class="duration" data-value="22815188800">22.815</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.BaseDriver.verfiylogin()</td>
+              <td>52</td>
+              <td class="duration" data-value="1466591319">1.466</td>
+              <td class="duration" data-value="1466591319">1.759</td>
+              <td class="duration" data-value="76262748600">1:16.262</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.BaseDriver.verifyScaffoldWebAppsection(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="707458566">0.707</td>
+              <td class="duration" data-value="707458566">0.794</td>
+              <td class="duration" data-value="2122375700">2.122</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application(java.lang.String)</td>
+              <td>47</td>
+              <td class="duration" data-value="6148197527">6.148</td>
+              <td class="duration" data-value="6148197527">10.154</td>
+              <td class="duration" data-value="288965283800">4:48.965</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LocationListValidations.Clickoncancelbutton()</td>
+              <td>1</td>
+              <td class="duration" data-value="4864351200">4.864</td>
+              <td class="duration" data-value="4864351200">4.864</td>
+              <td class="duration" data-value="4864351200">4.864</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LocationListValidations.Verifylocationcreatedsuccessfuly()</td>
+              <td>1</td>
+              <td class="duration" data-value="81285300">0.081</td>
+              <td class="duration" data-value="81285300">0.081</td>
+              <td class="duration" data-value="81285300">0.081</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LocationListValidations.click_on_locations_option()</td>
+              <td>10</td>
+              <td class="duration" data-value="1465020880">1.465</td>
+              <td class="duration" data-value="1465020880">1.571</td>
+              <td class="duration" data-value="14650208800">14.650</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LocationListValidations.i_click_on_adm_menu()</td>
+              <td>22</td>
+              <td class="duration" data-value="760907340">0.760</td>
+              <td class="duration" data-value="760907340">1.033</td>
+              <td class="duration" data-value="16739961500">16.739</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LocationListValidations.i_create_a_location()</td>
+              <td>1</td>
+              <td class="duration" data-value="8062680200">8.062</td>
+              <td class="duration" data-value="8062680200">8.062</td>
+              <td class="duration" data-value="8062680200">8.062</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LocationListValidations.verify_all_headers_are_displayed_on_location_list_table(java.lang.String)</td>
+              <td>6</td>
+              <td class="duration" data-value="135613783">0.135</td>
+              <td class="duration" data-value="135613783">0.175</td>
+              <td class="duration" data-value="813682700">0.813</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LocationListValidations.verify_edit_link_is_displayed_on_location_list_table()</td>
+              <td>1</td>
+              <td class="duration" data-value="115320000">0.115</td>
+              <td class="duration" data-value="115320000">0.115</td>
+              <td class="duration" data-value="115320000">0.115</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LocationListValidations.verify_location_list_page_is_displayed()</td>
+              <td>11</td>
+              <td class="duration" data-value="3078497627">3.078</td>
+              <td class="duration" data-value="3078497627">3.086</td>
+              <td class="duration" data-value="33863473900">33.863</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginPageValidations.Clickonloginbutton()</td>
+              <td>10</td>
+              <td class="duration" data-value="2387148190">2.387</td>
+              <td class="duration" data-value="2387148190">3.891</td>
+              <td class="duration" data-value="23871481900">23.871</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginPageValidations.Enterpassword(java.lang.String)</td>
+              <td>10</td>
+              <td class="duration" data-value="109571660">0.109</td>
+              <td class="duration" data-value="109571660">0.127</td>
+              <td class="duration" data-value="1095716600">1.095</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginPageValidations.Enterusername(java.lang.String)</td>
+              <td>10</td>
+              <td class="duration" data-value="163868450">0.163</td>
+              <td class="duration" data-value="163868450">0.227</td>
+              <td class="duration" data-value="1638684500">1.638</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginPageValidations.Navigatetoscaffoldwebapplication()</td>
+              <td>10</td>
+              <td class="duration" data-value="7332537470">7.332</td>
+              <td class="duration" data-value="7332537470">7.661</td>
+              <td class="duration" data-value="73325374700">1:13.325</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginPageValidations.Verifyerrormessageifnopassword(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="52718200">0.052</td>
+              <td class="duration" data-value="52718200">0.052</td>
+              <td class="duration" data-value="52718200">0.052</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginPageValidations.Verifyerrormessageifnousername(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="44330400">0.044</td>
+              <td class="duration" data-value="44330400">0.044</td>
+              <td class="duration" data-value="44330400">0.044</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginPageValidations.Verifyerrormessageifnousernameandpassword(java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="87765900">0.087</td>
+              <td class="duration" data-value="87765900">0.087</td>
+              <td class="duration" data-value="87765900">0.087</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginPageValidations.Verifyloginerrormessage(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="46886000">0.046</td>
+              <td class="duration" data-value="46886000">0.046</td>
+              <td class="duration" data-value="46886000">0.046</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginPageValidations.loginscreendisplayed()</td>
+              <td>10</td>
+              <td class="duration" data-value="10179740">0.010</td>
+              <td class="duration" data-value="10179740">0.015</td>
+              <td class="duration" data-value="101797400">0.101</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.ReportLogs.clickReportLogs(java.lang.String)</td>
+              <td>64</td>
+              <td class="duration" data-value="2788857870">2.788</td>
+              <td class="duration" data-value="2788857870">8.716</td>
+              <td class="duration" data-value="178486903700">2:58.486</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.ReportLogs.verifyScaffoldReportLog(java.lang.String)</td>
+              <td>26</td>
+              <td class="duration" data-value="5204154384">5.204</td>
+              <td class="duration" data-value="5204154384">5.720</td>
+              <td class="duration" data-value="135308014000">2:15.308</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.UserListValidations.Clickonaddrecordbutton()</td>
+              <td>6</td>
+              <td class="duration" data-value="2166811000">2.166</td>
+              <td class="duration" data-value="2166811000">2.654</td>
+              <td class="duration" data-value="13000866000">13.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.UserListValidations.Clickoncancelbutton()</td>
+              <td>2</td>
+              <td class="duration" data-value="7354025050">7.354</td>
+              <td class="duration" data-value="7354025050">7.482</td>
+              <td class="duration" data-value="14708050100">14.708</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.UserListValidations.Clickonedit()</td>
+              <td>1</td>
+              <td class="duration" data-value="5915951100">5.915</td>
+              <td class="duration" data-value="5915951100">5.915</td>
+              <td class="duration" data-value="5915951100">5.915</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.UserListValidations.Createuser()</td>
+              <td>2</td>
+              <td class="duration" data-value="7359159400">7.359</td>
+              <td class="duration" data-value="7359159400">7.523</td>
+              <td class="duration" data-value="14718318800">14.718</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.UserListValidations.Editrecord()</td>
+              <td>1</td>
+              <td class="duration" data-value="5622958000">5.622</td>
+              <td class="duration" data-value="5622958000">5.622</td>
+              <td class="duration" data-value="5622958000">5.622</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.UserListValidations.Ideleterecord()</td>
+              <td>1</td>
+              <td class="duration" data-value="6359323800">6.359</td>
+              <td class="duration" data-value="6359323800">6.359</td>
+              <td class="duration" data-value="6359323800">6.359</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.UserListValidations.Verifthechanges()</td>
+              <td>1</td>
+              <td class="duration" data-value="62484000">0.062</td>
+              <td class="duration" data-value="62484000">0.062</td>
+              <td class="duration" data-value="62484000">0.062</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.UserListValidations.Verifyactionbuttonds()</td>
+              <td>1</td>
+              <td class="duration" data-value="733170600">0.733</td>
+              <td class="duration" data-value="733170600">0.733</td>
+              <td class="duration" data-value="733170600">0.733</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.UserListValidations.Verifyallheaders(java.lang.String)</td>
+              <td>7</td>
+              <td class="duration" data-value="920512114">0.920</td>
+              <td class="duration" data-value="920512114">1.027</td>
+              <td class="duration" data-value="6443584800">6.443</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.UserListValidations.Verifycolumn()</td>
+              <td>1</td>
+              <td class="duration" data-value="247269854300">4:7.269</td>
+              <td class="duration" data-value="247269854300">4:7.269</td>
+              <td class="duration" data-value="247269854300">4:7.269</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.UserListValidations.Verifyrecorddeleted()</td>
+              <td>1</td>
+              <td class="duration" data-value="49335100">0.049</td>
+              <td class="duration" data-value="49335100">0.049</td>
+              <td class="duration" data-value="49335100">0.049</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.UserListValidations.Verifyuserlistpage()</td>
+              <td>2</td>
+              <td class="duration" data-value="3083874350">3.083</td>
+              <td class="duration" data-value="3083874350">3.084</td>
+              <td class="duration" data-value="6167748700">6.167</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>35</td>
+            <td>356</td>
+            <td class="duration">3.383</td>
+            <td class="duration">4:48.965</td>
+            <td class="duration">20:4.467</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Cucumber HTML Reports</td>
+        <td>1</td>
+      <td>01 Feb 2023, 16:10</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">stepDefinitions.BaseDriver.logout_of_the_application()</td>
+              <td>10</td>
+              <td class="duration" data-value="763885810">0.763</td>
+              <td class="duration" data-value="763885810">1.160</td>
+              <td class="duration" data-value="7638858100">7.638</td>
+              <td class="failed">90.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.BaseDriver.verfiylogin()</td>
+              <td>10</td>
+              <td class="duration" data-value="1563934210">1.563</td>
+              <td class="duration" data-value="1563934210">1.818</td>
+              <td class="duration" data-value="15639342100">15.639</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.GeneratorReportMain.login_into_scaffold_log_automation_application(java.lang.String)</td>
+              <td>10</td>
+              <td class="duration" data-value="7614552880">7.614</td>
+              <td class="duration" data-value="7614552880">11.893</td>
+              <td class="duration" data-value="76145528800">1:16.145</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LocationListValidations.i_click_on_adm_menu()</td>
+              <td>10</td>
+              <td class="duration" data-value="760838960">0.760</td>
+              <td class="duration" data-value="760838960">0.865</td>
+              <td class="duration" data-value="7608389600">7.608</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LogSheetSetup.EnterAssetsData(java.lang.String,java.lang.String)</td>
+              <td>129</td>
+              <td class="duration" data-value="1066193715">1.066</td>
+              <td class="duration" data-value="1066193715">13.294</td>
+              <td class="duration" data-value="137538989300">2:17.538</td>
+              <td class="failed">99.22%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LogSheetSetup.SelectType(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1593904200">1.593</td>
+              <td class="duration" data-value="1593904200">1.593</td>
+              <td class="duration" data-value="1593904200">1.593</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LogSheetSetup.Verifylogsheetheaders(java.lang.String)</td>
+              <td>100</td>
+              <td class="duration" data-value="29564026">0.029</td>
+              <td class="duration" data-value="29564026">0.103</td>
+              <td class="duration" data-value="2956402600">2.956</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LogSheetSetup.selectLogsheetDropdown(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="3583080800">3.583</td>
+              <td class="duration" data-value="3583080800">3.583</td>
+              <td class="duration" data-value="3583080800">3.583</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LogSheetSetup.verifyLogSheetDisplay(java.lang.String)</td>
+              <td>10</td>
+              <td class="duration" data-value="1097236600">1.097</td>
+              <td class="duration" data-value="1097236600">1.299</td>
+              <td class="duration" data-value="10972366000">10.972</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LogSheetSetup.verifyLogsheetDropdown(java.lang.String)</td>
+              <td>10</td>
+              <td class="duration" data-value="658213490">0.658</td>
+              <td class="duration" data-value="658213490">0.822</td>
+              <td class="duration" data-value="6582134900">6.582</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LogSheetSetup.verifyassetsUpdated(java.lang.String,java.lang.String)</td>
+              <td>129</td>
+              <td class="duration" data-value="806504560">0.806</td>
+              <td class="duration" data-value="806504560">3.204</td>
+              <td class="duration" data-value="104039088300">1:44.039</td>
+              <td class="failed">99.22%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LogSheetValidations.ClickonSaveandContinuebutton()</td>
+              <td>10</td>
+              <td class="duration" data-value="3201404700">3.201</td>
+              <td class="duration" data-value="3201404700">5.190</td>
+              <td class="duration" data-value="32014047000">32.014</td>
+              <td class="failed">90.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LogSheetValidations.SelectLogSheet_Commen(java.lang.String)</td>
+              <td>9</td>
+              <td class="duration" data-value="2811178133">2.811</td>
+              <td class="duration" data-value="2811178133">4.265</td>
+              <td class="duration" data-value="25300603200">25.300</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LogSheetValidations.VerifyAssetDisplayedOnLogSheetPage(java.lang.String,java.lang.String)</td>
+              <td>129</td>
+              <td class="duration" data-value="12739756341">12.739</td>
+              <td class="duration" data-value="12739756341">2:10.009</td>
+              <td class="duration" data-value="1643428568100">27:23.428</td>
+              <td class="failed">99.22%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.ReportLogs.clickReportLogs(java.lang.String)</td>
+              <td>10</td>
+              <td class="duration" data-value="5548601160">5.548</td>
+              <td class="duration" data-value="5548601160">6.543</td>
+              <td class="duration" data-value="55486011600">55.486</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>15</td>
+            <td>578</td>
+            <td class="duration">3.686</td>
+            <td class="duration">27:23.428</td>
+            <td class="duration">35:30.527</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

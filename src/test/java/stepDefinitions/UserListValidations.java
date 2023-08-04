@@ -80,17 +80,18 @@ public class UserListValidations {
 		Select role=new Select(driver.findElement(By.xpath("//div[@id='logContainer']//form//select[@id='inputRole']")));
 		role.selectByVisibleText("Operator");
 		Select reportingto=new Select(driver.findElement(By.xpath("//div[@id='logContainer']//form//select[@id='inputReportingTo']")));
-		reportingto.selectByVisibleText("Test User User");
+		reportingto.selectByVisibleText("Chandrasekar G");
 		Select primarylocation=new Select(driver.findElement(By.xpath("//div[@id='logContainer']//form//select[@id='inputPrimaryLocation']")));
 		primarylocation.selectByVisibleText("ASCE");
 		Select secondarylocation=new Select(driver.findElement(By.xpath("//div[@id='logContainer']//form//select[@id='inputSecondaryLocation']")));
 		secondarylocation.selectByVisibleText("Turbine DCS");
 		Select secondarylocation2=new Select(driver.findElement(By.xpath("//div[@id='logContainer']//form//select[@id='inputSecondaryLocation2']")));
 		secondarylocation2.selectByVisibleText("Turbine Local");
-		driver.findElement(By.xpath("(//div[@id='logContainer']//form//input)[4]")).sendKeys("user1@deliverain.com");
-		driver.findElement(By.xpath("(//div[@id='logContainer']//form//input)[5]")).sendKeys("12345667890");
-		driver.findElement(By.xpath("(//div[@id='logContainer']//form//input)[6]")).sendKeys("Test@123");
-		driver.findElement(By.xpath("((//div[@id='logContainer']//form//div)[18]//input)[2]")).click();
+		driver.findElement(By.id("inputEmail")).sendKeys("user1@deliverain.com");
+		driver.findElement(By.id("inputNumber")).sendKeys("12345667890");
+		driver.findElement(By.id("newPassword")).sendKeys("Test@123");
+		driver.findElement(By.id("confirmPassword")).sendKeys("Test@123");
+		driver.findElement(By.id("submit_changes_btn")).click();
 	}
 	
 	@Then("I delete a record")
@@ -132,15 +133,22 @@ public class UserListValidations {
 		Thread.sleep(3000);
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("window.scrollBy(0,250)");
-		driver.findElement(By.xpath("//div[@id='logContainer']//form//input[@name='firstName']")).clear();
-		driver.findElement(By.xpath("//div[@id='logContainer']//form//input[@name='firstName']")).sendKeys("useroneTest");
-		driver.findElement(By.xpath("((//div[@id='logContainer']//form//div)[18]//input)[2]")).click();		
+		//driver.findElement(By.id("inputEmail")).sendKeys("user1@deliverain.com");
+		driver.findElement(By.id("inputNumber")).sendKeys("12345667890");
+		//driver.findElement(By.id("newPassword")).sendKeys("Test@123");
+		//driver.findElement(By.id("confirmPassword")).sendKeys("Test@123");
+		driver.findElement(By.xpath("//*[@id=\"logContainer\"]/div/form/div/div[6]/input")).click();	
+		
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		String changes=wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("snackbar"))).getText();
+		Assert.assertEquals(changes, "Edit User Successful");
+		System.out.print("last record is Deleted");	
 	}
 	
 	@Then("Verify the changes")
 	public void Verifthechanges() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
-		String changes=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='snackbar']"))).getText();
+		String changes=wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("snackbar"))).getText();
 		Assert.assertEquals(changes, "Edit User Successful");
 		System.out.print("Edited text is matching"+changes);
 		
@@ -156,17 +164,18 @@ public class UserListValidations {
 		Select role=new Select(driver.findElement(By.xpath("//div[@id='logContainer']//form//select[@id='inputRole']")));
 		role.selectByVisibleText("Operator");
 		Select reportingto=new Select(driver.findElement(By.xpath("//div[@id='logContainer']//form//select[@id='inputReportingTo']")));
-		reportingto.selectByVisibleText("Test User User");
+		reportingto.selectByVisibleText("Chandrasekar G");
 		Select primarylocation=new Select(driver.findElement(By.xpath("//div[@id='logContainer']//form//select[@id='inputPrimaryLocation']")));
 		primarylocation.selectByVisibleText("ASCE");
 		Select secondarylocation=new Select(driver.findElement(By.xpath("//div[@id='logContainer']//form//select[@id='inputSecondaryLocation']")));
 		secondarylocation.selectByVisibleText("Turbine DCS");
 		Select secondarylocation2=new Select(driver.findElement(By.xpath("//div[@id='logContainer']//form//select[@id='inputSecondaryLocation2']")));
 		secondarylocation2.selectByVisibleText("Turbine Local");
-		driver.findElement(By.xpath("(//div[@id='logContainer']//form//input)[4]")).sendKeys("user1@deliverain.com");
-		driver.findElement(By.xpath("(//div[@id='logContainer']//form//input)[5]")).sendKeys("12345667890");
-		driver.findElement(By.xpath("(//div[@id='logContainer']//form//input)[6]")).sendKeys("Test@123");
-		driver.findElement(By.xpath("((//div[@id='logContainer']//form//div)[18]//input)[1]")).click();
+		driver.findElement(By.id("inputEmail")).sendKeys("user1@deliverain.com");
+		driver.findElement(By.id("inputNumber")).sendKeys("12345667890");
+		driver.findElement(By.id("newPassword")).sendKeys("Test@123");
+		driver.findElement(By.id("confirmPassword")).sendKeys("Test@123");
+		driver.findElement(By.id("submit_changes_btn")).click();
 	}
 	
 	@And("Verify the user list page")

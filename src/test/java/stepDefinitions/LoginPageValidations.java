@@ -15,16 +15,15 @@ import org.junit.Assert;
 import cucumber.api.Scenario;
 
 public class LoginPageValidations {
-	//	 String URL = "https://scaffold-dev.deliverain.io:5000/Login";
+	
 	public static Scenario scenario;
 	WebDriver driver;
 	public LoginPageValidations(CommonSteps commonsteps){
 		driver=commonsteps.getDriver();
 	}
-	@Given("Navigate to scaffold v2 web application") 
+/*	@Given("Navigate to scaffold v2 web application") 
 	public void Navigatetoscaffoldwebapplication() throws InterruptedException, IOException {
 
-		//	WebDriverWait wait = new WebDriverWait(driver, 15);
 		Thread.sleep(2000);
 		CommonSteps.launchBrowser();
 		//	System.out.println("Step 1");
@@ -35,7 +34,7 @@ public class LoginPageValidations {
 		String AppURL = driver.getCurrentUrl();
 		Thread.sleep(2000);
 		System.out.println("Step2 AppURL"+AppURL);
-		Assert.assertEquals(AppURL, "https://scaffold-dev.deliverain.io:5000/Login" );
+		Assert.assertEquals(AppURL, "https://scaffold-dev.deliverain.io:8090/Login" );
 		System.out.println("URL matching --> Part executed");
 
 	}
@@ -78,12 +77,12 @@ public class LoginPageValidations {
 	
 	@Then("verify if error message {string} {string} displayed")
 	public void Verifyerrormessageifnousernameandpassword(String message1, String message2) {
-		String UsernameMessage=driver.findElement(By.xpath("((//div[@class='container-fluid']//form//div[@class='form-fields mb-3'])[1]//span)[2]")).getText();
+		String UsernameMessage=driver.findElement(By.xpath("//*[@id=\"user-name-error\"]")).getText();
 		System.out.println("UsernameMessage"+ UsernameMessage);
 		Assert.assertEquals(UsernameMessage, message1 );
 		System.out.println("ErrorMessage is matching "+ UsernameMessage);
 
-		String PasswordMessage=driver.findElement(By.xpath("((//div[@class='container-fluid']//form//div[@class='form-fields mb-3'])[2]//span)[2]")).getText();
+		String PasswordMessage=driver.findElement(By.xpath("//*[@id=\"password-error\"]")).getText();
 		System.out.println("UsernameMessage"+ PasswordMessage);
 		Assert.assertEquals(PasswordMessage, message2 );
 		System.out.println("ErrorMessage is matching "+ PasswordMessage);
@@ -91,7 +90,7 @@ public class LoginPageValidations {
 	}
 	@Then("verify if error message {string} displayed for blank username field")
 	public void Verifyerrormessageifnousername(String message1) {
-		String UsernameMessage=driver.findElement(By.xpath("((//div[@class='container-fluid']//form//div[@class='form-fields mb-3'])[1]//span)[2]")).getText();
+		String UsernameMessage=driver.findElement(By.xpath("//*[@id=\"user-name-error\"]")).getText();
 		System.out.println("UsernameMessage"+ UsernameMessage);
 		Assert.assertEquals(UsernameMessage, message1 );
 		System.out.println("ErrorMessage is matching "+ UsernameMessage);
@@ -100,10 +99,10 @@ public class LoginPageValidations {
 	}
 	@Then("verify if error message {string} displayed for blank password field")
 	public void Verifyerrormessageifnopassword(String message1) {
-		String PasswordMessage=driver.findElement(By.xpath("((//div[@class='container-fluid']//form//div[@class='form-fields mb-3'])[2]//span)[2]")).getText();
+		String PasswordMessage=driver.findElement(By.xpath("//*[@id=\"password-error\"]")).getText();
 		System.out.println("UsernameMessage"+ PasswordMessage);
 		Assert.assertEquals(PasswordMessage, message1 );
 		System.out.println("ErrorMessage is matching "+ PasswordMessage);
 
-	}
+	} */
 }
